@@ -1,96 +1,140 @@
 func MainPage(page : &mut HtmlPage) {
 #md
-# Welcome to the Premium Showcase 🚀
+# Markdown + CBI Feature Showcase
 
-Chemical Markdown isn't just about text; it's about **experience**. This showcase demonstrates the full power of our compiler and its ability to render beautiful, complex documents with zero runtime overhead.
+This page is intentionally **long and varied** to validate rendering across themes.
+It covers headers, paragraphs, emphasis, links, code, tables, containers, task lists, footnotes, and more.
 
-## ✨ Core Philosophy
+---
 
-1.  **Lightning Fast**: Compiled at build-time for instant loading.
-2.  **Universal Themes**: Switch styles without touching a single line of logic.
-3.  **Extensible Syntax**: Support for advanced features like task lists and abbreviations.
+## 1) Typography & Inline Features
 
-___
+Plain paragraph text with **bold**, *italic*, ~~strikethrough~~, ==mark==, ++insert++, H~2~O, and E=mc^2^.
 
-### 🎭 Typography & Expression
+Mixed punctuation and symbols: `[]{}()<>` and quotes: "double" / 'single'.
 
-We believe that great content deserves great fonts. 
-You can use **Bold**, *Italic*, or even ~~Strikethrough~~ to make your point. 
+Abbreviation definition (block-style):
+*[HTML]: HyperText Markup Language
+*[CSS]: Cascading Style Sheets
 
-Need more precision?
-- **Marked text** for attention ==like this==
-- **Inserted** content ++new stuff++
-- **Chemical Formulas**: H~2~O, E=mc^2^
-- **Abbreviations**: *[HTML]: HyperText Markup Language
+Now use them inline: HTML and CSS should render as abbreviations when supported.
 
-> "Design is not just what it looks like and feels like. Design is how it works." 
+---
+
+## 2) Links, Autolinks, and Images
+
+A normal link: [Chemical Website](https://chemical-lang.org)
+
+A link with title: [Example](https://example.com "Example Title")
+
+An autolink: <https://chemical-lang.org>
+
+An image:
+![A placeholder image](https://placehold.co/900x220/png "Placeholder")
+
+---
+
+## 3) Blockquotes
+
+> "Design is not just what it looks like and feels like. Design is how it works."
 > — Steve Jobs
 
 ---
 
-### 💻 Code & Technical Writing
+## 4) Code
+
+Inline code like `const x = 10` should render consistently.
 
 ```typescript
-// Seamlessly integrated syntax highlighting
-function helloChemical() {
-  const message = "Hello, Modern World!";
+// Fenced code block
+type Status = "Awesome" | "Okay";
+
+export function helloChemical(name: string): { status: Status; performance: number } {
+  const message = `Hello, ${name}!`;
   console.log(message);
-  
-  return {
-    status: "Awesome",
-    performance: 100
-  };
+  return { status: "Awesome", performance: 100 };
 }
 ```
 
-You can also use `inline code` for quick references like `const x = 10`.
+```
+// Unspecified language
+line 1
+line 2
+line 3
+```
 
 ---
 
-### � Structured Data
+## 5) Tables (alignment + inline formatting)
 
 | Category | Feature | Support | Performance |
-| :--- | :--- | :--- | :--- |
-| **Parsing** | Native Tables | Full | Ultra-fast |
-| **Logic** | Dynamic Values | Built-in | Optimized |
-| **Visuals** | Glassmorphism | Custom | GPU-Ready |
+| :--- | :---: | ---: | :--- |
+| **Parsing** | Tables | Full | Ultra-fast |
+| *Inline* | `code` | Yes | Optimized |
+| ~~Legacy~~ | ==Mark== | ++Insert++ | H~2~O |
 
-#### 📝 Task Lists & Deep Nesting
+---
+
+## 6) Lists (unordered, ordered, nesting)
+
+Unordered:
+- One
+- Two
+  - Two.A
+  - Two.B
+- Three
+
+Ordered:
+1. Alpha
+2. Beta
+3. Gamma
+
+---
+
+## 7) Task Lists (including deep nesting)
 
 - [x] Implement core Markdown parser
 - [x] Add theme support
 - [ ] Implement live previewer
-    - [x] Web interface
-    - [ ] Desktop app (Electron?)
+  - [x] Web interface
+  - [ ] Desktop app (Electron?)
+  - [ ] QA
+    - [x] Snapshot tests
+    - [ ] Accessibility pass
 - [x] Optimize performance
 
 ---
 
-### 📣 Component Intelligence (CBI)
+## 8) Custom Containers (CBI)
 
 ::: info
 **Information**: This entire page is generated at compile-time into a high-performance string concatenation block.
 :::
 
 ::: tip
-**Pro Tip**: Use the theme switcher on the left to see how different typography affects readability.
+**Pro Tip**: Switch themes and scan: headers, code blocks, tables, and checkboxes should remain readable.
 :::
 
 ::: warning
-**Caution**: Make sure your emojis are saved in a UTF-8 environment to avoid mangling!
+**Caution**: Ensure UTF-8 source files to avoid emoji mangling.
 :::
 
 ::: error
-**Critical**: Never settle for basic text rendering when you can have a showcase.
+**Critical**: Verify contrast in dark themes.
 :::
-
-### 🔗 References & Footnotes
-
-You can easily add links to [Chemical Website](https://chemical-lang.org) or add footnotes for extra context[^1].
 
 ---
 
-### 📅 Definition Lists
+## 9) Footnotes
+
+A statement with a footnote reference[^1] and another reference[^note].
+
+[^1]: Footnote number one: uses **bold**, *italic*, and `inline code`.
+[^note]: Named footnote: includes a link to [Example](https://example.com).
+
+---
+
+## 10) Definition Lists
 
 Chemical
 :   A powerful systems programming language for the modern web.
@@ -98,7 +142,14 @@ Chemical
 Markdown
 :   A lightweight markup language with plain-text formatting syntax.
 
-[^1]: This is a footnote demonstrating the `md_cbi` extension support.
+Rendering
+:   Turning structured markup into HTML.
+
+---
+
+## 11) Interpolation / Dynamic Values
+
+If interpolation is enabled in this environment, this should render as a value: ${1 + 2}.
 
 #endmd
 }

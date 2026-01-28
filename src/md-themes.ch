@@ -66,6 +66,20 @@ func injectMarkdownThemeBase(page : &mut HtmlPage) {
       margin: 0.5em 0;
     }
 
+    .md-theme .md-task-checkbox {
+      width: 1.05em;
+      height: 1.05em;
+      margin: 0 0.55em 0 0;
+      vertical-align: middle;
+      transform: translateY(-0.05em);
+      accent-color: currentColor;
+      opacity: 0.9;
+    }
+
+    .md-theme .md-task-checkbox:disabled {
+      cursor: default;
+    }
+
     .md-theme .md-blockquote {
       margin: 2em 0;
       padding: 1.5em 2em;
